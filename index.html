@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MileTracker</title>
+	<link rel="stylesheet" href='css/style.css'></link>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+	<script type="text/javascript" src='js/script.js'></script>
+</head>
+<body>
+	<!--HOMEPAGE-->
+	<div data-role='page' id='home'>
+		<header data-role='header'>
+			<h1>Mile Tracker</h1>
+		</header>	
+		<div data-role='navbar'>
+			<ul>
+				<li><a href="#home" data-transition='none' data-icon='home'>Home</a></li>
+				<li><a href="#add" data-transition='none' data-icon='plus'>Add Run</a></li>
+			</ul>
+		</div>
+
+		<div data-role='content'>
+			<h3>Welcome to Mile Tracker App!</h3>
+			<p>With this app you can track your running, jogging or walking miles.</p>
+			<h3>Your Latest Runs</h3>
+
+			<ul id='stats' data-role='listview' data-inset='true' data-filter='true' data-filter-placeholder='Filter runs by date or distance'>
+				
+			</ul>
+
+			<br>
+			<button id='clearRuns' onclick="return confirm('Are you sure?')" data-theme='b'>Clear total Mileage</button>
+		</div>
+
+		<footer data-role='footer'>
+			<h4>Miletracker &copy; dheerajmehta</h4>
+		</footer>
+	</div>
+
+	<!--ADDPAGE-->
+	<div data-role='page' id='add'>
+		<header data-role='header'>
+			<h1>Mile Tracker</h1>
+		</header>	
+		<div data-role='navbar'>
+			<ul>
+				<li><a href="#home" data-transition='none' data-icon='home'>Home</a></li>
+				<li><a href="#add" data-transition='none' data-icon='plus'>Add Run</a></li>
+			</ul>
+		</div>
+
+		<div data-role='content'>
+			<h3>Add runs</h3>
+			<form id='addForm'>
+				<label for='addMiles'>Enter Miles:</label>
+				<input type="text" id='addMiles'></input>
+
+				<label for='addDate'>Enter Date:</label>
+				<input type="text" id='addDate' data-role='date' data-inline='true' class="date"></input>
+
+				<button id='submitRun' data-theme='b'>Submit</button>
+			</form>
+		</div>
+
+		<footer data-role='footer'>
+			<h4>Miletracker &copy; dheerajmehta</h4>
+		</footer>
+	</div>
+
+	<!--EDITPAGE-->
+	<div data-role='page' id='edit'>
+		<header data-role='header'>
+			<h1>Mile Tracker</h1>
+		</header>	
+		<div data-role='navbar'>
+			<ul>
+				<li><a href="#home" data-transition='none' data-icon='home'>Home</a></li>
+				<li><a href="#add" data-transition='none' data-icon='plus'>Add Run</a></li>
+			</ul>
+		</div>
+
+		<div data-role='content'>
+			<h3>Edit runs</h3>
+			<form id='addForm'>
+				<label for='editMiles'>Enter Miles:</label>
+				<input type="text" id='editMiles'></input>
+
+				<label for='editDate'>Enter Date:</label>
+				<input type="text" id='editDate' data-role='date' data-inline='true' class="date"></input>
+
+				<button id='submitEdit' data-theme='b'>Update</button>
+			</form>
+		</div>
+
+		<footer data-role='footer'>
+			<h4>Miletracker &copy; dheerajmehta</h4>
+		</footer>
+	</div>
+
+</body>
+</html>
